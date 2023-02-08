@@ -1,0 +1,408 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+ * {
+    box-sizing: border-box; 
+ }
+ body{
+    background-color: steelblue;
+    color: #fff;
+    font-family: 'Muli',sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+ }
+ .container{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-radius: 5px;
+ }
+
+ .btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: lightblue;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 17px;
+    margin-top: 30px;
+    border: 0;
+    border-radius: 3px;
+
+
+ }
+ .btn:focus{
+    outline: 0;
+ }
+ .btn:active{
+    transform: scale(1.036);
+ }
+ .text p{
+    padding-top: 50px;
+ }
+ .container h1{
+    text-align: center;
+    margin-bottom: 30px;
+ }
+.container a{
+    text-decoration: none;
+    color: lightblue;
+}
+
+.form-control{
+    position: relative;
+    margin: 8px 0 19px;
+    width: 300px;
+}
+.form-control input{
+    background-color:  transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+
+}
+.form-control input:focus, 
+.form-control input:valid{
+    outline: 0;
+    border-bottom: lightblue;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: lightblue;
+    transform:  translateY(-30px);
+}
+
+.clr{
+  color: #d5a948 !important;
+}
+/* --------------- header -------------- */
+.header_logo{
+  width:40px;
+}
+.header_input{
+  width:45%;
+}
+.header_input input{
+  border-radius: 0px 50px 50px 0;
+  height: 45px;
+  padding: 8px 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: system-ui;
+}
+.header_input p {
+  border-radius: 50px 0px 0px 50px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  color: #fff;
+  width: 50px;
+  font-size: 20px;
+  height: 45px;
+  border-right: 0;
+}
+.desktop_icon i {
+  color: gray;
+  font-size: 28px;
+  padding: 10px;
+  background: #fff;
+}
+.setting_button,.admin_button{
+  width: 135px;
+  margin-left: 8px;
+  border: 2px solid #68c6e9;
+  border-radius: 8px;
+}
+.setting_button button{
+  color: #68c6e9;
+}
+.main-dropdown{
+  background-color: #d5a948;
+  padding: 3px 12px;
+  border: 2px solid #d5a948;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.main_header_btn {
+  width: 180px;
+  padding: 7px 12px;
+  border: 2px solid #d5a948;
+  background: #fff;
+  border-radius: 8px;
+  color: #d5a948;
+  font-weight: 600;
+}
+.header-name{
+  font-family: cursive;
+  vertical-align: middle;
+  color: #97bfb2;
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 10px;   
+}
+.header-icon{
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.header-icon i {
+  color: #d5a948c9;
+  padding: 5px 20px;
+  
+}
+/* -------------- header -------------- */
+
+
+/* -------------- side-bar -------------- */
+.sideBarMenu{
+  padding: 10px;
+}
+.customerPera div {
+  background: #d5a948;
+  padding: 8px 15px;
+  border-radius: 8px 8px 0px 0px;
+}
+.inputSearch input{
+  border-radius: 50px 0px 0px 50px;
+  padding: 0px 15px;
+  border: 2px solid #fff;
+  height: 38px;
+  font-size: 14px;
+}
+/* .inputSearch{
+  width: 250px !important;
+} */
+
+.inputSearch button{
+  border-radius: 0px 50px 50px 0px;
+  background: #fff;
+}
+.inputSearch button i{
+  color:#6c757d7a;
+  background: #fff;
+  font-size: 14px;
+} 
+.plusIcon {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  padding-top: 12px;
+  color: #d5a948;
+}   
+.addressPera {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+.bgColor div{
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;    
+}
+.sideBarMenu {
+  border-radius: 8px; 
+  background: #97bfb2;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 7px;
+  display: table;
+  height: 100%;
+}
+#sideBarMenu ,#sideBarMenu_phone{
+  display: none;
+}
+/* -------------- side-bar -------------- */
+
+/* -------------- Right- box -------------- */
+.right-box {
+  /* background: #fff; */
+  padding: 10px 0;
+}
+.first_column {
+  border: 2px solid #97bfb2;
+  background: #97bfb254;
+  border-radius: 10px;
+  padding: 8px 15px;
+}
+.first_column h5 ,.last_column h5 {
+  font-size: 17px;
+}
+.last_column {
+  border: 2px solid #80808040;
+  background: #80808040;
+  border-radius: 10px;
+  padding: 8px 15px;
+}
+img.right-icon-logo {
+  width: 100%;
+  height: 60px;
+  max-width: 60px;
+  /* margin-right: 10px; */
+  border: 1px solid #d5a948;
+  border-radius: 50px;
+  padding: 1px;
+}
+/* .right-img-container {
+  width: 850px;
+} */
+.budge_green span {
+  color: #fff;
+  background: #97bfb2;
+  padding: 3px 10px;
+  border-radius: 25px
+}
+.budge_yellow span {
+  color: #fff;
+  background: #d5a948;
+  padding: 3px 10px;
+  border-radius: 25px
+}
+
+/* -------------- Phone Sidebar -------------- */
+.side_header {
+  color: #fff;
+  font-size: 22px;
+  font-family: cursive;
+  vertical-align: middle;
+  background: #d5a948;
+  padding: 15px 20px;
+}
+.btn-operator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-operator a {
+  border: 1px solid #d5a948;
+  border-radius: 20px;
+  font-size: 13px;
+  background: #fff;
+  padding: 6px 30px;
+}
+.btn-operator p {
+  font-size: 12px;
+  font-weight: 600;
+}
+.historyButton {
+  display: flex;
+  align-items: center;
+}
+.historyButton a {
+  border: 1px solid #fff;
+  margin-right: 10px;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.historyButton div a {
+  width: 75px;
+}
+.history h5 {
+  padding-bottom: 10px;
+}
+.historyButton div a.active ,.historyButton div a:hover  {
+  background: #d5a948;
+  border-color: #d5a948;
+  color: #fff;
+}
+.phone_user{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px !important;
+  border: 2px solid #97bfb2;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  padding: 7px;
+  color: #97bfb2 !important;
+  background: #8080801f;
+}
+.dialPadContent {
+  position: fixed;
+  bottom: 5%;
+  right: 12%;
+}
+.dialPad {
+
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 10px 13px;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+}
+.searchingIcon i{
+  background: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #808080bf;
+}
+
+/* -----SET OPERATOR -----*/    
+.plusIcon {
+  border: 2px solid #d5a948;
+}
+.daysBtn{
+  width: 60px;
+  padding: 5px 5px !important;    
+}
+.btn-cancel{
+  background: #fff;
+  padding: 8px 30px !important;
+  border-radius: 50px !important;
+}
+.btn-save{
+  background: #d5a948; 
+  border-radius: 50px;
+  color: #fff;
+}
+.btn-position{
+  position: fixed;
+  bottom: 10px;
+  width: 400px;
+}
+.img-border img{
+  border-radius: 50px; 
+}
+.main_heading {
+  background: #d5a948;
+  padding: 4px 10px;
+  align-items: center;
+  border-radius: 9px;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+
