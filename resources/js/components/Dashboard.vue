@@ -241,6 +241,9 @@
 
             </div>
         </section>
+        <section class="graph">
+            <div id="chart_div"></div>
+        </section>
          <!---------------- DESKTOP ---------------->
 
          <div id="sideBarMenu_phone" >
@@ -342,9 +345,19 @@
  
  <script>
      export default {
-         mounted() {
-             console.log('Component mounted.')
-         }
+       
      }
+
+     $(document).ready(function(){
+        $("#desktop").click(function(){
+            alert('hi')
+            $("#sideBarMenu").fadeToggle();
+        });
+
+        $("#phone").click(function(){
+            $("#sideBarMenu_phone").fadeToggle();
+        });
+
+    });
  </script>
  
