@@ -119,6 +119,8 @@
                                     </div>
                                 </div>
                             </div>
+                            
+            <div id="chart_div"></div>
                         </div>
                       </div>
                 </div>
@@ -241,9 +243,6 @@
 
             </div>
         </section>
-        <section class="graph">
-            <div id="chart_div"></div>
-        </section>
          <!---------------- DESKTOP ---------------->
 
          <div id="sideBarMenu_phone" >
@@ -340,17 +339,21 @@
             </aside>
          </div>
     </div>
-     
+    <GoogleChart />
 </template>
  
  <script>
+ 
+import GoogleChart from './GoogleChart.vue'
      export default {
-       
+        name: 'App',
+        components: {
+            GoogleChart
+        }
      }
 
      $(document).ready(function(){
         $("#desktop").click(function(){
-            alert('hi')
             $("#sideBarMenu").fadeToggle();
         });
 
@@ -360,4 +363,4 @@
 
     });
  </script>
- 
+        

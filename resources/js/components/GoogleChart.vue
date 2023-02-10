@@ -21,9 +21,26 @@ const columns = [
   { type: "date", label: "End Date" },
 ];
 const rows = [
-  ["1", "test1", "#181818",  new Date("7 26,2019 6:00:11"), new Date("7 26,2019 6:30:56")],
-  ["2", "test2", "#e3d3b2", new Date("7 26,2019 7:00:11"), new Date("7 26,2019 7:30:56")],
-  ["3", 'test3', "#d3e932", new Date("7 26,2019 8:00:11"), new Date("7 26,2019 8:30:56")],
+  ["Name1", "$", "#eaeaea",  new Date("7 26,2019 8:00:00"), new Date("7 26,2019 8:45:00")],
+  ["Name1", "☆", "#f6d2b8", new Date("7 26,2019 8:45:00"), new Date("7 26,2019 9:30:00")],
+  ["Name1", '⌛', "#c3d6b0", new Date("7 26,2019 9:30:00"), new Date("7 26,2019 10:00:00")],
+  ["Name2", '☕', "#eb9cba", new Date("7 26,2019 8:15:00"), new Date("7 26,2019 9:15:00")],
+  ["Name2", '⌚', "#c3d6b0", new Date("7 26,2019 9:15:00"), new Date("7 26,2019 9:45:00")],
+  ["Name3", 'test4', "#f6d2b8", new Date("7 26,2019 9:45:00"), new Date("7 26,2019 10:30:00")],
+  ["Name3", 'test4', "#eaeaea", new Date("7 26,2019 8:00:00"), new Date("7 26,2019 9:00:00")],
+  ["Name4", 'test4', "#eaeaea", new Date("7 26,2019 8:00:00"), new Date("7 26,2019 8:45:00")],
+  ["Name4", 'test4', "#f6d2b8", new Date("7 26,2019 8:45:00"), new Date("7 26,2019 9:30:00")],
+  ["Name5", 'test4', "#c3d6b0", new Date("7 26,2019 8:15:00"), new Date("7 26,2019 9:15:00")],
+  ["Name5", 'test4', "#eb9cba", new Date("7 26,2019 9:15:00"), new Date("7 26,2019 10:00:00")],
+  ["Name6", 'test4', "#eb9cba", new Date("7 26,2019 8:15:00"), new Date("7 26,2019 9:00:00")],
+  ["Name6", 'test4', "#eb9cba", new Date("7 26,2019 9:15:00"), new Date("7 26,2019 10:00:00")],
+  ["Name6", 'test4', "#eb9cba", new Date("7 26,2019 10:00:00"), new Date("7 26,2019 10:30:00")],
+  ["Name7", 'test4', "#606060", new Date("7 26,2019 8:00:00"), new Date("7 26,2019 9:15:00")],
+  ["Name7", 'test4', "#c3d6b0", new Date("7 26,2019 9:15:00"), new Date("7 26,2019 10:00:00")],
+  ["Name8", 'test4', "#eaeaea", new Date("7 26,2019 8:00:00"), new Date("7 26,2019 8:45:00")],
+  ["Name8", 'test4', "#eb9cba", new Date("7 26,2019 8:45:00"), new Date("7 26,2019 9:30:00")],
+  ["Name9", 'test4', "#eaeaea", new Date("7 26,2019 8:00:00"), new Date("7 26,2019 9:00:00")],
+  ["Name9", 'test4', "#f6d2b8", new Date("7 26,2019 9:45:00"), new Date("7 26,2019 10:30:00")],
 ];
 export default {
   name: "timeline",
@@ -35,15 +52,18 @@ export default {
   setup() {
     const chartData = [columns, ...rows];
     const chartOptions ={
-        timeline: { showRowLabels: false },
+        // timeline: { showRowLabels: false },
         rowLabelStyle: { fontName: 'Arial Black'} ,
         tooltip: {
-        isHtml: true
+        isHtml: true,
+        vAxis: {title: '', format: '£#,##0.00;(£#,##0.00)', prefix:"£", fontSize: '24'},
+        hAxis: {format: 'currency', prefix:"£", fontSize: '24'},
         },
         legend: 'none',
         forceIFrame: true,
-        width: 1000,
-        height: 180
+        width: '100%',
+        height: '100000',
+        
       };
     return {
       chartData,
