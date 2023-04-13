@@ -2,7 +2,11 @@
       <div class="container p-5">
         <h3 class="text-center mt-2 mb-5"><img src="images/logo.svg" alt="Logo"></h3>
         <div class="col-md-12">
-         
+          <span class="text-danger" v-for="(errorArray, idx) in notifmsg" :key="idx">
+            <span v-for="(allErrors, idx) in errorArray" :key="idx">
+                <span class="text-danger">{{ allErrors}} </span>
+            </span>
+        </span>
           <form v-on:submit.prevent="login_user">
             
            <div class="mb-3">
@@ -38,6 +42,7 @@
     data(){
     return {
      
+    notifmsg: '',
       form:{
         email: '',
         password: ''
@@ -64,26 +69,19 @@
            }
            else
            {
-
             Swal.fire({
-              title: 'OPPS',
-              text:   "error",
-              icon: 'warning',
-            
-          });
+                title: 'OPPS',
+                text:   "Please Enter Valid Email Address and Password!",
+                icon: 'warning',
+              
+            });
              
            }
             
         })
-        .catch((e)=>{
-            console.log(e);
-             Swal.fire({
-            title: 'Hurry',
-            text:   e,
-            icon: 'warning',
-            
-          });
-        })
+        .catch(e => {
+       this.notifmsg = e.response.data
+      })
       }
     }
     
